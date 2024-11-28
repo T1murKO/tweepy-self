@@ -1206,7 +1206,7 @@ class Client(BaseHTTPClient):
         return updated
 
     async def establish_status(self):
-        url = "https://api.x.com/i/api/1.1/account/update_profile.json"
+        url = "https://api.x.com/1.1/account/update_profile.json"
         headers = {'x-client-transaction-id': self._encode_x_client_transaction_id("/1.1/account/update_profile.json")}
         try:
             await self.request("POST", url, auto_unlock=False, auto_relogin=False, headers=headers)
